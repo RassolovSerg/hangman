@@ -1,6 +1,6 @@
 # hangman
 
-**hangman** is a game, made as a hometask of 
+**hangman** is a game, made as a hometask for 
 MIPT Course on Software Design, Fall 2017.
 
 ## Copyright 
