@@ -2,7 +2,7 @@ import random
 
 
 def reader(name):
-    with open('dictionary.dat','r') as f:
+    with open('dictionary.dat', 'r') as f:
         return f.read().split('\n')[:-1]
 
 
@@ -47,9 +47,9 @@ def main():
                 print 'You won!'
                 bool = False
         else:
-            missed +=1
+            missed += 1
             print 'Missed, mistake', missed, 'out of', mistakes
-            if missed >=mistakes:
+            if missed >= mistakes:
                 print_word(word, guesses)
                 print 'You lost!'
                 bool = False
