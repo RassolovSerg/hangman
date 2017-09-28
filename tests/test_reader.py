@@ -2,7 +2,7 @@ from hangman import reader
 
 
 def test_reader():
-    name = 'kakashka.dat'
+    name = 'kakashka.tmp'
     with open(name, 'w') as kakashka:
         kakashka.write('kek' + '\n')
 
