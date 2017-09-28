@@ -1,5 +1,5 @@
-from hangman import print_word
 import sys
+from hangman import print_word
 
 
 def test_print_word():
