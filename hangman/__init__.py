@@ -2,8 +2,8 @@ import random
 
 
 def reader(name):
-    with open('dictionary.dat', 'r') as f:
-        return f.read().split('\n')[:-1]
+    with open(name, 'r') as dictionary_file:
+        return dictionary_file.read().split('\n')[:-1]
 
 
 def print_word(word, guesses):
@@ -32,9 +32,9 @@ def main():
     mistakes = 5
     missed = 0
     guesses = set()
-    bool = True
+    boolean = True
 
-    while bool:
+    while boolean:
         print_word(word, guesses)
         print 'Guess a letter:'
         letter = raw_input()
@@ -45,11 +45,11 @@ def main():
             if check(word, guesses):
                 print_word(word, guesses)
                 print 'You won!'
-                bool = False
+                boolean = False
         else:
             missed += 1
             print 'Missed, mistake', missed, 'out of', mistakes
             if missed >= mistakes:
                 print_word(word, guesses)
                 print 'You lost!'
-                bool = False
+                boolean = False
