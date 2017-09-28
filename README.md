@@ -1,10 +1,15 @@
 # hangman
 
-**hangman** is a game, made as a hometask for 
+[![Build Status][travis-badge]][travis-url]
+
+
+**hangman** is a game, made as a hometask for
 MIPT Course on Software Design, Fall 2017.
 
-## Copyright 
+## Copyright
 
 Copyright 2017 Ivan Shkurak. See [license] for details.
 
 [license]: LICENSE.txt
+[travis-url]: https://travis-ci.org/shkurak/hangman
+[travis-badge]: https://travis-ci.org/shkurak/hangman.svg?branch=master
