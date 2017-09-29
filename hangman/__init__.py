@@ -25,14 +25,17 @@ def check(word, guesses):
     return answer
 
 
-def main():
-    diction = reader('dictionary.dat')
+def initial(name):
+    diction = reader(name)
     word = random.choice(diction)
-
     mistakes = 5
     missed = 0
     guesses = set()
     boolean = True
+    return word, mistakes, missed, guesses, boolean
+
+def main():
+    word, mistakes, missed, guesses, boolean = intial('dictionary.dat')
 
     while boolean:
         print_word(word, guesses)
