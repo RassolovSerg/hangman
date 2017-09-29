@@ -34,6 +34,7 @@ def initial(name):
     boolean = True
     return word, mistakes, missed, guesses, boolean
 
+
 def main():
     word, mistakes, missed, guesses, boolean = initial('dictionary.dat')
 

@@ -1,5 +1,6 @@
 from hangman import initial
 
+
 def test_initial():
     with open('dictionary.tmp', 'w') as file_to_write:
         file_to_write.write('kakashka\n')
@@ -8,4 +9,4 @@ def test_initial():
     assert mistakes == 5
     assert missed == 0
     assert guesses == set()
-    assert boolean == True
+    assert boolean
