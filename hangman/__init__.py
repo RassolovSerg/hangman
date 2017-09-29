@@ -35,7 +35,7 @@ def initial(name):
     return word, mistakes, missed, guesses, boolean
 
 def main():
-    word, mistakes, missed, guesses, boolean = intial('dictionary.dat')
+    word, mistakes, missed, guesses, boolean = initial('dictionary.dat')
 
     while boolean:
         print_word(word, guesses)
