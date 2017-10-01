@@ -22,12 +22,15 @@ setup(
         "pytest-pycodestyle",
         "pytest-pep257",
         "pytest-cov",
+        "random",
     ],
     tests_require=[
         "pytest",
         "pylint",
         "pycodestyle",
         "pep257",
+        "sys",
+        "os",
     ],
     classifiers=[
         "Development Status :: 1 - Planning",
