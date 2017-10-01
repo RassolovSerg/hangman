@@ -7,3 +7,4 @@ def test_reader():
         kakashka.write('kek' + '\n')
 
     assert reader(name) == ['kek']
+    os.remove(name)
