@@ -1,9 +1,8 @@
 import random
 
 
-def reader(name):
-    with open(name, 'r') as dictionary_file:
-        return dictionary_file.read().split('\n')[:-1]
+def get_dictionary():
+    return ['kek', 'hello', 'bro', 'lol', 'matan']
 
 
 def print_word(word, guesses):
@@ -25,8 +24,8 @@ def check(word, guesses):
     return answer
 
 
-def initial(name):
-    diction = reader(name)
+def initial():
+    diction = get_dictionary()
     word = random.choice(diction)
     mistakes = 5
     missed = 0
@@ -36,7 +35,7 @@ def initial(name):
 
 
 def main():
-    word, mistakes, missed, guesses, boolean = initial('dictionary.dat')
+    word, mistakes, missed, guesses, boolean = initial()
 
     while boolean:
         print_word(word, guesses)
