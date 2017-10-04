@@ -24,7 +24,27 @@ def letter_input():
     return raw_input()
 
 
-class game(object):
+def iteration(self, (word, mistakes, missed, guesses)):
+    boolean = True
+    letter = letter_input()
+    guesses.add(letter)
+    if letter in word:
+        print 'Hit!\n'
+        if check(word, guesses):
+            print_word(word, guesses)
+            print 'You won!'
+            boolean = False
+    else:
+        missed += 1
+        print 'Missed, mistake', missed, 'out of', mistakes, '\n'
+        if missed >= mistakes:
+            print_word(word, guesses)
+            print 'You lost!'
+            boolean = False
+    return boolean, missed, guesses
+
+
+class Game(object):
 
     def __init__(self):
         self.dictionary = ['kek', 'hello', 'bro', 'lol', 'matan']
@@ -33,25 +53,6 @@ class game(object):
         self.missed = 0
         self.guesses = set()
         self.boolean = True
-
-    def iteration(self, (word, mistakes, missed, guesses)):
-        boolean = True
-        letter = letter_input()
-        guesses.add(letter)
-        if letter in word:
-            print 'Hit!\n'
-            if check(word, guesses):
-                print_word(word, guesses)
-                print 'You won!'
-                boolean = False
-        else:
-            missed += 1
-            print 'Missed, mistake', missed, 'out of', mistakes, '\n'
-            if missed >= mistakes:
-                print_word(word, guesses)
-                print 'You lost!'
-                boolean = False
-        return boolean, missed, guesses
 
     def play(self):
         while self.boolean:
@@ -62,5 +63,5 @@ class game(object):
 
 
 def main():
-    new_game = game()
+    new_game = Game()
     new_game.play()
