@@ -1,11 +1,13 @@
 import random
 
+
 def check(word, guesses):
     answer = True
     for i in word:
         if i not in guesses:
             answer = False
     return answer
+
 
 def print_word(word, guesses):
     answer = ''
