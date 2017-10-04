@@ -20,7 +20,7 @@ def check(word, guesses):
     return answer
 
 
-class game():
+class Game():
 
     def __init__(self):
         self.dictionary = ['kek', 'hello', 'bro', 'lol', 'matan']
