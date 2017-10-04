@@ -46,7 +46,7 @@ class game():
                 boolean = False
         else:
             missed += 1
-            print 'Missed, mistake', missed, 'out of', mistakes,'\n'
+            print 'Missed, mistake', missed, 'out of', mistakes, '\n'
             if missed >= mistakes:
                 print_word(word, guesses)
                 print 'You lost!'

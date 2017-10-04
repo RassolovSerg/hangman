@@ -1,7 +1,7 @@
-from hangman import game
 import unittest
 import mock
 import __builtin__
+from hangman import game
 
 class Test(unittest.TestCase):
     @mock.patch.object(__builtin__, 'raw_input')
