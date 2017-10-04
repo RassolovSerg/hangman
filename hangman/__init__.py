@@ -19,10 +19,12 @@ def check(word, guesses):
             answer = False
     return answer
 
+
 def letter_input():
     return raw_input()
 
-class Game(object):
+
+class game(object):
 
     def __init__(self):
         self.dictionary = ['kek', 'hello', 'bro', 'lol', 'matan']
@@ -60,5 +62,5 @@ class Game(object):
 
 
 def main():
-    new_game = Game()
+    new_game = game()
     new_game.play()
