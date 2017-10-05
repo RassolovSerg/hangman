@@ -1,7 +1,6 @@
 import sys
 import StringIO
 from hangman import Game
-import hangman
 from mock import patch
 
 
