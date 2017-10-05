@@ -34,7 +34,7 @@ class Game(object):
         self.guesses = set()
         self.boolean = True
 
-    def iteration(self, (word, mistakes, missed, guesses)):
+    def iteration(self, (word, missed, guesses)):
         letter = letter_input()
         guesses.add(letter)
         if letter in word:
@@ -45,8 +45,8 @@ class Game(object):
                 self.boolean = False
         else:
             missed += 1
-            print 'Missed, mistake', missed, 'out of', mistakes, '\n'
-            if missed >= mistakes:
+            print 'Missed, mistake', missed, 'out of', self.mistakes, '\n'
+            if missed >= self.mistakes:
                 print_word(word, guesses)
                 print 'You lost!'
                 self.boolean = False
@@ -56,7 +56,7 @@ class Game(object):
         while self.boolean:
             print_word(self.word, self.guesses)
             print 'Guess a letter:'
-            arguments = (self.word, self.mistakes, self.missed, self.guesses)
+            arguments = (self.word, self.missed, self.guesses)
             self.missed, self.guesses = self.iteration(arguments)
 
 
