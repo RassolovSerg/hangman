@@ -2,4 +2,5 @@ import hangman
 
 
 def main():
-    hangman.main()
+    result = hangman.main()
+    return result

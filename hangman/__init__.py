@@ -61,3 +61,4 @@ class Game(object):
 def main():
     new_game = Game()
     new_game.play()
+    return True
