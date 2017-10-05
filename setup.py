@@ -28,6 +28,7 @@ setup(
         "pylint",
         "pycodestyle",
         "pep257",
+        "mock",
     ],
     classifiers=[
         "Development Status :: 1 - Planning",
